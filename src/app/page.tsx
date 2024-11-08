@@ -28,7 +28,7 @@ function Menu() {
         </div>
       )
     })}
-    <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2">
+    <div className="fixed bottom-2 left-1/2 transform -translate-x-1/2">
       <Link href="/order">
         <Button className="transition-colors bg-zinc-900 px-3 py-2 hover:bg-zinc-600 text-slate-200 font-bold rounded-full shadow-lg">
           View Order
