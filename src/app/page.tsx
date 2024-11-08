@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <Menu menu={MENU} />
+      <Menu />
     </>
   );
 }
