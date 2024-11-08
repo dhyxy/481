@@ -16,9 +16,16 @@ export default function Card(props: CardProps) {
         const modifications = props.item.modifications;
         const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
         return <Dialog open={showModal} onClose={() => setShowModal(false)} className={'relative z-50'}>
-            <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
+            <div className="fixed inset-0 flex h-fit w-screen items-center justify-center p-4">
                 <DialogPanel className="space-y-4 bg-slate-100 px-6 py-4 flex flex-col rounded shadow w-full h-[90%]">
-                    <DialogTitle className="font-bold text-xl">{props.item.name}</DialogTitle>
+                    <div className="flex flex-row justify-between">
+                        <DialogTitle className="font-bold text-xl">{props.item.name}</DialogTitle>
+                        <Button onClick={() => setShowModal(false)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </Button>
+                    </div>
                     {props.item.image && <Image className="w-full h-48" src={props.item.image} alt="image" />}
                     <Description>
                         {props.item.description}
