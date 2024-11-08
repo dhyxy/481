@@ -16,7 +16,7 @@ export default function Card(props: CardProps) {
         const modifications = props.item.modifications;
         const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
         return <Dialog open={showModal} onClose={() => setShowModal(false)} className={'relative z-50'}>
-            <div className="fixed inset-0 flex h-fit w-screen items-center justify-center p-4">
+            <div className="fixed inset-0 flex h-full w-screen items-center justify-center p-4">
                 <DialogPanel className="space-y-4 bg-slate-100 px-6 py-4 flex flex-col rounded shadow w-full h-[90%]">
                     <div className="flex flex-row justify-between">
                         <DialogTitle className="font-bold text-xl">{props.item.name}</DialogTitle>
