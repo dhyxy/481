@@ -9,7 +9,7 @@ import Image from 'next/image';
 interface CardProps {
     item: Item
 }
-export default function (props: CardProps) {
+export default function Card(props: CardProps) {
     const [showModal, setShowModal] = useState(false);
     const AddItemModal = (props: { item: Item }) => {
         const orderStore = useOrderStore();
@@ -19,7 +19,7 @@ export default function (props: CardProps) {
             <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
                 <DialogPanel className="space-y-4 bg-slate-100 px-6 py-4 flex flex-col rounded shadow w-full h-[90%]">
                     <DialogTitle className="font-bold text-xl">{props.item.name}</DialogTitle>
-                    <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains" />
+                    {props.item.image && <Image className="w-full h-48" src={props.item.image} alt="image" />}
                     <Description>
                         {props.item.description}
                     </Description>

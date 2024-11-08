@@ -3,7 +3,7 @@ import { REQUESTS } from "@/services/requests"
 import { Button } from "@headlessui/react"
 import Link from "next/link"
 
-export default function () {
+export default function Menu() {
     return <>
         <div className="h-screen m-4 flex flex-col">
             <Link className="ml-auto" href={'/'}>

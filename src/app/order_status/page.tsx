@@ -4,7 +4,7 @@ import { Order, useOrderStore } from "@/services/order";
 import { Button } from "@headlessui/react";
 import Link from "next/link";
 
-export default function () {
+export default function OrderStatusPage() {
     const orderState = useOrderStore();
 
     return <>

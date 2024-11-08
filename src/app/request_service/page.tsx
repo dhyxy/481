@@ -5,7 +5,7 @@ import { REQUESTS } from "@/services/requests";
 import { Button, Field, Label, Select } from "@headlessui/react";
 import { useState } from "react";
 
-export default function () {
+export default function RequestServicePage() {
     const [selectedService, setSelectedService] = useState(REQUESTS[0]);
     return <>
         <Nav />

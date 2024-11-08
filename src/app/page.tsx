@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Course, MENU } from "../services/menu";
+import { MENU } from "../services/menu";
 import Card from "./Card";
 import Nav from "@/components/Nav";
 import Link from "next/link";
@@ -15,7 +14,7 @@ export default function Home() {
 }
 
 
-function Menu(props: { menu: Course[] }) {
+function Menu() {
   return <section className="grid gap-6 p-8 justify-center">
     {MENU.map(course => {
       return (

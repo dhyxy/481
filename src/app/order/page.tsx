@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Button } from "@headlessui/react";
 
 
-export default function () {
+export default function OrderPage() {
     const orderStore = useOrderStore()
 
     const subTotal = orderStore.orderSummary.orders.reduce((sum, curr) => sum + (curr.item.price * curr.quantity), 0)
